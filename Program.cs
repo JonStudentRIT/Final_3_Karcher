@@ -243,7 +243,7 @@ namespace Final_3
                               "Ahead of you lies 8 rooms.  The rooms can be found in 3 different states Ice, Liquid, and Gas.\n" +
                               "Every 1 second the rooms shift state.  If the room is of the state ice it will transition to liquid.  If the room is of\n" +
                               "the state liquid it will transition to gas.  If the room is of the state gas it will transition to ice.  In order to\n" +
-                              "move from one room to another you will need enough health to travel the path and be in the state of the room you are" +
+                              "move from one room to another you will need enough health to travel the path and be in the state of the room you are\n" +
                               "trying to go to, the states of the rooms are");
             for (int i = 0; i < S.map.Count(); i++)
             {
@@ -257,13 +257,13 @@ namespace Final_3
                     Console.WriteLine("Room " + S.map.ElementAt<Node>(i).name + " is in the state " + S.map.ElementAt<Node>(i).state);
                 }
             }
-            Console.WriteLine("In order to proceed in the game enter the value found in the() for any menu of options." +
-                             "Remember there might be rooms that you dont see yet just because you don’t have enough " +
-                             "health yet to have the option to go down the path.  " +
-                             "In order to get more health you must gamble with what health you have.  " +
-                             "If chose to gamble then you will be presented with a question about video games.  " +
-                             "If you answer correctly then you gain the health that you need to change states and to move around the map.  " +
-                             "But be warned if you answer wrong it could mean your life.");
+            Console.WriteLine("In order to proceed in the game enter the value found in the() for any menu of options.\n" +
+                             "Remember there might be rooms that you dont see yet just because you don’t have enough \n" +
+                             "health yet to have the option to go down the path.\n" +
+                             "In order to get more health you must gamble with what health you have.\n" +
+                             "If chose to gamble then you will be presented with a question about video games.\n" +
+                             "If you answer correctly then you gain the health that you need to change states and to move around the map.\n" +
+                             "But be warned if you answer wrong it could mean your life.\n");
             Console.WriteLine("(Enter) Press enter when you are ready to begin.\n");
             // wait untill the player is ready to start all of the timers
             Console.ReadLine();
@@ -673,7 +673,7 @@ namespace Final_3
                 {
                     foreach (Node r in S.map)
                     {
-                        r.ChangeState();
+                        //r.ChangeState();
                     }
                     ResetStateChangeTimer();
                 }
